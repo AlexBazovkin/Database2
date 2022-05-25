@@ -5,13 +5,11 @@ CREATE TABLE IF NOT EXISTS genres (
 
 CREATE TABLE IF NOT EXISTS artists (
 	id serial PRIMARY KEY,
-	name varchar(50) NOT NULL UNIQUE,
-	albums_list varchar(50) UNIQUE
+	name varchar(50) NOT NULL UNIQUE
 );
 
 CREATE TABLE IF NOT EXISTS albums (
 	id serial PRIMARY KEY,
-	artist_id integer REFERENCES artists(id),
 	name varchar(50) NOT NULL UNIQUE,
 	year integer
 );
